@@ -28,8 +28,9 @@ dependencies {
     compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
 
-    testCompileOnly(libs.lombok)
-    testAnnotationProcessor(libs.lombok)
+    // Use JUnit Jupiter for testing.
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.bundles.junit)
 
 }
 
